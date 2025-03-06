@@ -23,36 +23,43 @@ const Home = () => {
         <div className="min-h-screen bg-gray-50">
 
             <HeroSlider />
-            {/* Featured Categories */}
             <section className="py-12 px-5">
-                <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Explore Our Categories</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {[
-                        { name: "Stock Images", image: "/images/category-images.jpg" },
-                        { name: "Icons & Illustrations", image: "/images/category-icons.jpg" },
-                        { name: "UI Elements", image: "/images/category-elements.jpg" },
-                        { name: "Website Themes", image: "/images/category-themes.jpg" },
-                        { name: "Code Snippets", image: "/images/category-code.jpg" },
-                    ].map((category, index) => (
-                        <div
-                            key={index}
-                            className="p-6 text-center bg-white shadow-md hover:shadow-lg transition rounded-lg"
-                        >
-                            <Image
-                                src={category.image}
-                                alt={category.name}
-                                width={150}
-                                height={150}
-                                className="rounded-lg mx-auto"
-                            />
-                            <h3 className="mt-3 text-lg font-semibold text-gray-900">{category.name}</h3>
-                            <button className="mt-3 px-4 py-2 border border-gray-300 text-gray-800 rounded-md hover:bg-gray-200 transition">
-                                Explore
-                            </button>
-                        </div>
-                    ))}
-                </div>
-            </section>
+  <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">
+    Explore Our Categories
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+    {[
+      { name: "Stock Images", image: "/assets/hrushikeshjena-free-Stock Images.jpg" },
+      { name: "Icons & Illustrations", image: "/assets/hrushikeshjena-free-Icons & Illustrations.jpg" },
+      { name: "UI Elements", image: "/assets/hrushikeshjena-free-uI-elements.jpg" },
+      { name: "Website Themes", image: "/assets/hrushikeshjena-free-website-themes.jpg" },
+      { name: "Code Snippets", image: "/assets/hrushikeshjena-free-code-snippets.jpg" },
+    ].map((category, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center bg-white shadow-md hover:shadow-lg transition rounded-lg p-6 h-[300px] w-full"
+      >
+        <div className="w-40 h-40">
+          <Image
+            src={category.image}
+            alt={category.name}
+            width={160}
+            height={160}
+            className="rounded-lg object-cover w-full h-full"
+          />
+        </div>
+        <h3 className="mt-4 text-lg font-semibold text-gray-900 text-center">
+          {category.name}
+        </h3>
+        <button className="mt-auto px-5 py-2 border border-gray-300 text-gray-800 rounded-md hover:bg-gray-200 transition">
+          Explore
+        </button>
+      </div>
+    ))}
+  </div>
+</section>
+
+
 
             {/* Trending Products */}
             <section className="py-12 px-5 bg-white">
