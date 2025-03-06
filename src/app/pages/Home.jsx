@@ -58,10 +58,6 @@ const Home = () => {
     ))}
   </div>
 </section>
-
-
-
-            {/* Trending Products */}
             <section className="py-12 px-5 bg-white">
                 <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Trending Digital Assets</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
